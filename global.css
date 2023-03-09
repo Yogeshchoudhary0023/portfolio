@@ -16,7 +16,7 @@ html {
 }
 /* .container-large {
     width: 100%;
-    max-width: 20rem;
+    max-width: 90rem;
     margin-right: auto;
     margin-left: auto;
 } */
@@ -267,10 +267,39 @@ li{
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
     /* -ms-grid-columns: 2fr 1fr; */
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     /* -ms-grid-rows: auto; */
     grid-template-rows: auto;
   }
+  @media screen and (min-width:768px) { 
+    .layout-grid{
+      grid-column-gap: 2rem;
+      grid-row-gap: 2rem;
+      /* -ms-grid-columns: 2fr 1fr; */
+      grid-template-columns: 3fr 1fr;
+      /* -ms-grid-rows: auto; */
+      /* grid-template-rows: auto; */
+    }
+  }
+   
+
+  /* @media screen and (min-width: 640px) { 
+    .layout-grid{
+      grid-column-gap: 2rem;
+      grid-row-gap: 2rem;
+      -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+      -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-rows: repeat(1, minmax(0, 1fr));
+    }
+} */
+.about-grid{
+  grid-template-columns: 3fr 1fr;
+}
+
+ 
+
   #shadow_color{
     box-shadow: 6px 8px 15px 0 rgb(0 0 0 / 15%), -8px -6px 15px 0 #fff;
     background-color: #f1f1f1;
@@ -280,8 +309,16 @@ li{
   }
   .service-item{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* margin-top: 20px; */
+    }
+   @media screen and (min-width: 1024px) { 
+    .service-item{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+ } 
+
   .contact-form {
     display: -ms-grid;
     display: grid;
@@ -328,6 +365,7 @@ li{
   -ms-flex: 0 auto;
   flex: 0 auto;
   border: 1px none #000;
+
   border-radius: 1.25rem;
   background-color: transparent;
   color: #9c9c9c;
@@ -335,6 +373,28 @@ li{
   line-height: 20px;
   font-weight: 400;
 }
+@media screen and (max-width:550px) { 
+  .form-input {
+    width: 100%;
+    justify-self: start;
+    height: 38px;
+    /* min-height: 4rem; */
+    margin-bottom: 0px;
+    padding: 1.25rem 0.5rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    border: 1px none #000;
+  
+    border-radius: 1.25rem;
+    background-color: transparent;
+    color: #9c9c9c;
+    font-size: 1rem;
+    /* line-height: 20px; */
+    font-weight: 400;
+  }
+} 
 /* .w-input, .w-select {
   display: block;
   width: 100%;
@@ -348,3 +408,27 @@ li{
   background-color: #ffffff;
   border: 1px solid #cccccc;
 } */
+@media screen and (max-width: 1024px) { 
+  .item-1{
+    grid-row-start: 4;
+    grid-row-end: 2;
+} 
+} 
+@media screen and (max-width: 1024px) { 
+  .item-11{
+    grid-row-start: 4;
+    grid-row-end: 2;
+} 
+} 
+@media screen and (max-width: 1024px) { 
+  .item-12{
+    grid-row-start: 4;
+    grid-row-end: 2;
+} 
+} 
+@media screen and (max-width: 1024px) { 
+  .item-13{
+    grid-row-start: 4;
+    grid-row-end: 2;
+} 
+} 
